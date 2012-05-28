@@ -1,0 +1,68 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.runner.RunWith;
+
+import test_util.DescriptivelyParameterized;
+import test_util.Sauce;
+
+/*
+ 1.Parameterization
+ 
+ https://github.com/dynacron-group/parallel-webtest/blob/master/src/main/java/com/dynacrongroup/webtest/DescriptivelyParameterized.java
+ instead of default Parameterized.class which numbers tests [0], [1] and so on.
+
+ 2. Parallelization
+
+ http://hwellmann.blogspot.com/2009/12/running-parameterized-junit-tests-in.html
+ http://saucelabs.com/blog/index.php/2010/10/parallel-junit-4-and-selenium-part-three-parallelism-and-ondemand/
+ https://github.com/saucelabs/parallel-test-examples/blob/master/java/junit/src/main/java/com/saucelabs/junit/Parallelized.java
+
+ http://saucelabs.com/blog/index.php/2012/02/getting-started-with-web-testing-using-selenium-sauce-labs/
+ https://github.com/dynacron-group/parallel-webtest
+ */
+
+@RunWith(DescriptivelyParameterized.class)
+public class ParamsTest extends Sauce {
+	private String os;
+	private String browser;
+	private static List<String[]> osBrowserPairs = new ArrayList<String[]>();
+
+	static {
+		// Test latest stable Firefox and Chrome on xp, vista, and linux.
+		// Note that xp = windows server 2003
+		// vista = windows server 2008
+		final String xp = "xp";
+		final String vista = "vista";
+		final String linux = "linux";
+		final String firefox = "firefox";
+		final String chrome = "chrome";
+
+		osBrowserPairs.add(new String[] { xp, firefox });
+		osBrowserPairs.add(new String[] { xp, chrome });
+
+		osBrowserPairs.add(new String[] { vista, firefox });
+		osBrowserPairs.add(new String[] { vista, chrome });
+
+		osBrowserPairs.add(new String[] { linux, firefox });
+		osBrowserPairs.add(new String[] { linux, chrome });
+	}
+
+	@DescriptivelyParameterized.Parameters
+	public static List<String[]> getParameters() {
+		return osBrowserPairs;
+	}
+
+	public ParamsTest(final String os, final String browser) {
+		this.os = os;
+		this.browser = browser;
+	}
+
+	@Before
+	public void setUp() {
+		setUpDriver(os, browser);
+	}
+}
