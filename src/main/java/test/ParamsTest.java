@@ -4,11 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import test_util.DescriptivelyParameterized;
-import test_util.Sauce;
 import test_util.ParallelRunner;
+import test_util.Sauce;
+
+import com.saucelabs.saucerest.junit.ResultReportingTestWatcher;
+import com.saucelabs.saucerest.junit.SessionIdProvider;
 
 /*
  1.Parameterization
@@ -27,10 +33,18 @@ import test_util.ParallelRunner;
  */
 
 @RunWith(ParallelRunner.class)
-public class ParamsTest extends Sauce {
+public class ParamsTest extends Sauce implements SessionIdProvider {
 	private String os;
 	private String browser;
 	private static List<String[]> osBrowserPairs = new ArrayList<String[]>();
+
+	public @Rule
+	ResultReportingTestWatcher reportPassFail = new ResultReportingTestWatcher(
+			this, key.user(), key.key());
+	public @Rule
+	TestName testName = new TestName();
+
+	private String sessionIdString;
 
 	static {
 		// Test latest stable Firefox and Chrome on xp, vista, and linux.
@@ -65,5 +79,12 @@ public class ParamsTest extends Sauce {
 	@Before
 	public void setUp() {
 		setUpDriver(os, browser);
+
+		sessionIdString = ((RemoteWebDriver) driver).getSessionId().toString();
+	}
+
+	@Override
+	public String getSessionId() {
+		return sessionIdString;
 	}
 }

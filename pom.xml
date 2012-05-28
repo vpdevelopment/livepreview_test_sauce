@@ -43,6 +43,10 @@
 			<artifactId>junit</artifactId>
 			<version>LATEST</version>
 		</dependency>
-		<!-- Xtend dependency broken on eclipse. Wait for 2.3 release. -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>LATEST</version>
+		</dependency>
 	</dependencies>
 </project>

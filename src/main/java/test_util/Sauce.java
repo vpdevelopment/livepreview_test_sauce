@@ -13,6 +13,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 /* For Sauce Labs OnDemand. */
 public class Sauce extends Base {
+	
+	protected Key key = new Key();
 
 	/**
 	 * Accepts the following as valid os strings:
@@ -81,7 +83,7 @@ public class Sauce extends Base {
 		capabilities.setCapability("name", name);
 
 		try {
-			driver = new RemoteWebDriver(new URL(Key.getSauceKey()),
+			driver = new RemoteWebDriver(new URL(key.url()),
 					capabilities);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
