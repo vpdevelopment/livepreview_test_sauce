@@ -8,10 +8,11 @@ import org.junit.runner.RunWith;
 
 import test_util.DescriptivelyParameterized;
 import test_util.Sauce;
+import test_util.ParallelRunner;
 
 /*
  1.Parameterization
- 
+
  https://github.com/dynacron-group/parallel-webtest/blob/master/src/main/java/com/dynacrongroup/webtest/DescriptivelyParameterized.java
  instead of default Parameterized.class which numbers tests [0], [1] and so on.
 
@@ -25,7 +26,7 @@ import test_util.Sauce;
  https://github.com/dynacron-group/parallel-webtest
  */
 
-@RunWith(DescriptivelyParameterized.class)
+@RunWith(ParallelRunner.class)
 public class ParamsTest extends Sauce {
 	private String os;
 	private String browser;
