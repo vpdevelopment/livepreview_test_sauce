@@ -15,5 +15,6 @@ Import both as existing maven project into Eclipse and add livepreview_test to t
 
 http://username:key@ondemand.saucelabs.com:80/wd/hub
 
-sauce.key - sauce key
-user.key - sauce username
+`sauce.key` - sauce key
+
+`user.key` - sauce username
