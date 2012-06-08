@@ -67,6 +67,13 @@ public class Sauce extends Base {
 			cap.setCapability("version", "11");
 			return cap;
 		}
+		
+		/* Test IE 9 (Ace supports IE >= 9) */
+		if (browser.contentEquals("ie")) {
+			final DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
+			cap.setCapability("version", "9");
+			return cap;
+		}
 
 		throw new RuntimeException("Unknown browser: " + browser);
 	}

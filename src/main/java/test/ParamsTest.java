@@ -61,6 +61,8 @@ public class ParamsTest extends Sauce implements SessionIdProvider {
 
 		osBrowserPairs.add(new String[] { vista, firefox });
 		osBrowserPairs.add(new String[] { vista, chrome });
+		// Test IE 9 (Ace supports IE >= 9)
+		osBrowserPairs.add(new String[] { vista, "ie" });
 
 		osBrowserPairs.add(new String[] { linux, firefox });
 		osBrowserPairs.add(new String[] { linux, chrome });

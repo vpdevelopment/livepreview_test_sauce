@@ -24,12 +24,14 @@ public class SauceREST {
 
 	public void jobPassed(String jobId) throws IOException {
 		Map<String, Object> updates = new HashMap<String, Object>();
+		updates.put("public", true);
 		updates.put("passed", true);
 		updateJobInfo(jobId, updates);
 	}
 
 	public void jobFailed(String jobId) throws IOException {
 		Map<String, Object> updates = new HashMap<String, Object>();
+		updates.put("public", true);
 		updates.put("passed", false);
 		updateJobInfo(jobId, updates);
 	}
