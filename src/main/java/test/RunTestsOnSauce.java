@@ -33,7 +33,7 @@ import com.saucelabs.saucerest.junit.SessionIdProvider;
  */
 
 @RunWith(ParallelRunner.class)
-public class ParamsTest extends Sauce implements SessionIdProvider {
+public class RunTestsOnSauce extends Sauce implements SessionIdProvider {
 	private String os;
 	private String browser;
 	private static List<String[]> osBrowserPairs = new ArrayList<String[]>();
@@ -73,7 +73,7 @@ public class ParamsTest extends Sauce implements SessionIdProvider {
 		return osBrowserPairs;
 	}
 
-	public ParamsTest(final String os, final String browser) {
+	public RunTestsOnSauce(final String os, final String browser) {
 		this.os = os;
 		this.browser = browser;
 	}
