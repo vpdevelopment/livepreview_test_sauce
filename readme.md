@@ -6,6 +6,10 @@ JavaScript generated from https://github.com/bootstraponline/livepreview_test_ge
 
 ---
 
+[Test results Jun 8](https://github.com/bootstraponline/livepreview_test_sauce/wiki/Test-Results-Jun-8)
+
+---
+
 ```
 git clone git://github.com/bootstraponline/livepreview_test_sauce.git
 git clone git://github.com/bootstraponline/livepreview_test.git
