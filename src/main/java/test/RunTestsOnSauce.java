@@ -50,7 +50,7 @@ public class RunTestsOnSauce extends Sauce implements SessionIdProvider {
 		// Test latest stable Firefox and Chrome on xp, vista, and linux.
 		// Note that xp = windows server 2003
 		// vista = windows server 2008
-		final String xp = "xp";
+		// final String xp = "xp";
 		final String vista = "vista";
 		final String linux = "linux";
 		final String firefox = "firefox";
@@ -61,8 +61,8 @@ public class RunTestsOnSauce extends Sauce implements SessionIdProvider {
 
 		osBrowserPairs.add(new String[] { vista, firefox });
 		osBrowserPairs.add(new String[] { vista, chrome });
-		// Test IE 9 (Ace supports IE >= 9)
-		osBrowserPairs.add(new String[] { vista, "ie" });
+		// Typed array support required. IE 10 + (not yet on sauce).
+		// osBrowserPairs.add(new String[] { vista, "ie" });
 
 		osBrowserPairs.add(new String[] { linux, firefox });
 		osBrowserPairs.add(new String[] { linux, chrome });
