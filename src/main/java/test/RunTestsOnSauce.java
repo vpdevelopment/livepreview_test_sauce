@@ -50,7 +50,7 @@ public class RunTestsOnSauce extends Sauce implements SessionIdProvider {
 		// Test latest stable Firefox and Chrome on xp, vista, and linux.
 		// Note that xp = windows server 2003
 		// vista = windows server 2008
-		// final String xp = "xp";
+		final String xp = "xp";
 		final String vista = "vista";
 		final String linux = "linux";
 		final String firefox = "firefox";
