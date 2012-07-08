@@ -23,7 +23,7 @@ public class BotTest extends Base {
 	public void setUp() throws Exception {
 		final DesiredCapabilities capabillities = DesiredCapabilities.chrome();
 		capabillities.setCapability("platform", Platform.MAC);
-		capabillities.setCapability("name", "Linux Chrome");
+		capabillities.setCapability("name", "Mac Chrome");
 		capabillities.setCapability("screenshot", "true");
 		capabillities.setCapability("screenrecorder", "true");
 
