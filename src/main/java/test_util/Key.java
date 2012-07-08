@@ -9,7 +9,7 @@ public final class Key {
 	private String user = null;
 	private String url = null;
 
-	private static String readFile(final String fileName) {
+	public static String readFile(final String fileName) {
 		try {
 			final File key = new File(fileName);
 			final byte[] data = new byte[(int) key.length()];

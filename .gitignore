@@ -6,4 +6,4 @@ target/
 *.log
 *.key
 xtend-gen/
-
+*.txt
