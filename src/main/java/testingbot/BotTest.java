@@ -15,6 +15,9 @@ import test_util.Key;
 public class BotTest extends Base {
 	/**
 	 * Run latest Chrome on Mac. https://testingbot.com/members
+	 * 
+	 * TODO: Report test results to testingbot.
+	 * http://testingbot.com/support/getting-started/java.html
 	 **/
 	@Before
 	public void setUp() throws Exception {
