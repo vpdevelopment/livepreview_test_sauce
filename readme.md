@@ -1,10 +1,9 @@
 Runs:
  - Chrome and Firefox 11 on Windows Server 2003, Windows Server 2008, and Linux.
- - IE 9 on Windows Server 2008.
 
-Depends on https://github.com/bootstraponline/livepreview_test
+Depends on [livepreview_test](https://github.com/bootstraponline/livepreview_test)
 
-JavaScript generated from https://github.com/bootstraponline/livepreview_test_gen
+JavaScript generated from [livepreview_test_gen](https://github.com/bootstraponline/livepreview_test_gen)
 
 # Test results
 
