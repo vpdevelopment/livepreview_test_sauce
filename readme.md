@@ -6,11 +6,11 @@ Depends on https://github.com/bootstraponline/livepreview_test
 
 JavaScript generated from https://github.com/bootstraponline/livepreview_test_gen
 
----
+# Test results
 
-[Test results Jun 8](https://github.com/bootstraponline/livepreview_test_sauce/wiki/Test-Results-Jun-8)
-
-[Test results Jun 18](https://github.com/bootstraponline/livepreview_test_sauce/wiki/Test-Results-Jun-18)
+- [Jun 8](https://github.com/bootstraponline/livepreview_test_sauce/wiki/Test-Results-Jun-8)
+- [Jun 18](https://github.com/bootstraponline/livepreview_test_sauce/wiki/Test-Results-Jun-18)
+- [Aug 9](https://github.com/bootstraponline/livepreview_test_sauce/wiki/Test-Results-Aug-9)
 
 ---
 
